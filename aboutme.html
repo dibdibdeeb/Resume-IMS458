@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Adibah Liyana</title>
+    <link rel="shortcut icon" href="picture/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="aboutme.css">
+</head>
+<body>
+
+    <header class="navbar" role="banner">
+        <div class="navbar__container">
+            <a style="color: #B2456E;" href="index.html" class="navbar__brand">
+                <img src="picture/logo.png" alt="Logo" class="navbar__logo">
+                Adibah Liyana
+            </a>
+            
+            <button class="navbar__toggle" 
+                    id="navbarToggle" 
+                    aria-label="Toggle navigation" 
+                    aria-controls="navbarMenu" 
+                    aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="aboutme.html" class="navbar__link">About Me</a></li>
+                    <li class="navbar__item"><a href="education.html" class="navbar__link">Education</a></li>
+                    <li class="navbar__item"><a href="career.html" class="navbar__link">Career</a></li>
+                    <li class="navbar__item"><a href="skills.html" class="navbar__link">Skills</a></li>
+                    <li class="navbar__item navbar__item--cta">
+                        <a href="contactme.html" class="navbar__link navbar__link--cta">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h1 class="about-title">About Me</h1>
+                <h2 class="about-subtitle">My Personal Information</h2>
+
+                <div class="about-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Name:</span>
+                        <span class="info-value">Adibah Liyana Binti Abd Halim</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student ID:</span>
+                        <span class="info-value">2025129463</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">21 (28/12/2004)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">E-mail:</span>
+                        <span class="info-value">adibah.liyana1@hmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Address:</span>
+                        <span class="info-value">52, Jalan Aman Perdana 11G/KU5, Taman Aman Perdana, 41050, Klang, Selangor.</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Published URL:</span>
+                        <span class="info-value"><a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image">
+                <img src="picture/profile_2.JPG" alt="Adibah Liyana">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-form__bottom">
+            <p>&copy; 2026 Adibah Liyana. Assignment purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function () {
+                    navbarToggle.classList.toggle('is-active');
+                    navbarMenu.classList.toggle('is-active');
+
+                    const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+                    navbarToggle.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

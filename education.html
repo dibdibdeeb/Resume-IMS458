@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Adibah Liyana</title>
+    <link rel="shortcut icon" href="picture/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="education.css">
+</head>
+<body>
+
+    <header class="navbar" role="banner">
+        <div class="navbar__container">
+            <a style="color: #B2456E;" href="index.html" class="navbar__brand">
+                <img src="picture/logo.png" alt="Logo" class="navbar__logo">
+                Adibah Liyana
+            </a>
+            
+            <button class="navbar__toggle" 
+                    id="navbarToggle" 
+                    aria-label="Toggle navigation" 
+                    aria-controls="navbarMenu" 
+                    aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="aboutme.html" class="navbar__link">About Me</a></li>
+                    <li class="navbar__item"><a href="education.html" class="navbar__link">Education</a></li>
+                    <li class="navbar__item"><a href="career.html" class="navbar__link">Career</a></li>
+                    <li class="navbar__item"><a href="skills.html" class="navbar__link">Skills</a></li>
+                    <li class="navbar__item navbar__item--cta">
+                        <a href="contactme.html" class="navbar__link navbar__link--cta">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="education-section">
+        <div class="education-container">
+            <div class="education-column">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-card">
+                    <div class="edu-logo">
+                        <img src="picture/uitm.png" alt="UiTM Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3 class="edu-title">Bachelor of Information Science (Hons) Information System Management</h3>
+                        <p class="edu-institution">Universiti Teknologi MARA</p>
+                        <p class="edu-location">Puncak Perdana Campus, Selangor.</p>
+                        <p class="edu-year">2025 - Current</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-logo">
+                        <img src="picture/uitm.png" alt="Kawangan Johor Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3 class="edu-title">Diploma in English For Professional Communication</h3>
+                        <p class="edu-institution">Universiti Teknologi MARA</p>
+                        <p class="edu-location"> Segamat Campus, Johor.</p>
+                        <p class="edu-year">2022 - 2025</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-logo">
+                        <img src="picture/smk meru.png" alt="School Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3 class="edu-title">SPM</h3>
+                        <p class="edu-institution">Sekolah Menengah Kebangsaan Meru</p>
+                        <p class="edu-location">Meru, Klang.</p>
+                        <p class="edu-year">2017 - 2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-column">
+                <h2 class="section-title">Achievements</h2>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Dean's List</h3>
+                        <p class="achievement-desc">Semester 1, 2025</p>
+                        <p class="achievement-institution">UiTM Campus Puncak Perdana</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">2nd Place in Radio Drama</h3>
+                        <p class="achievement-desc">Modern Language Olympiad (MLO)</p>
+                        <p class="achievement-institution">UiTM Campus Segamat</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Best English for SPM Paper</h3>
+                        <p class="achievement-desc">SPM 2021</p>
+                        <p class="achievement-institution">SMK Meru Klang</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">📜</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Participated in English Debate</h3>
+                        <p class="achievement-desc">Highschool Competition, SMK Meru</p>
+                        <p class="achievement-institution">2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-form__bottom">
+            <p>&copy; 2026 Adibah Liyana. Assignment purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function () {
+                    navbarToggle.classList.toggle('is-active');
+                    navbarMenu.classList.toggle('is-active');
+
+                    const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+                    navbarToggle.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

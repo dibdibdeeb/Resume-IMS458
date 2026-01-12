@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Adibah Liyana</title>
+    <link rel="shortcut icon" href="picture/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="aboutme.css">
+</head>
+<body>
+
+    <header class="navbar" role="banner">
+        <div class="navbar__container">
+            <a style="color: #B2456E;" href="index.html" class="navbar__brand">
+                <img src="picture/logo.png" alt="Logo" class="navbar__logo">
+                Adibah Liyana
+            </a>
+
+            <button class="navbar__toggle" 
+                    id="navbarToggle" 
+                    aria-label="Toggle navigation" 
+                    aria-controls="navbarMenu" 
+                    aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><p><a href="index.html" class="navbar__link">Home</a></p></li>
+                    <li class="navbar__item"><p><a href="aboutme.html" class="navbar__link">About Me</a></p></li>
+                    <li class="navbar__item"><a href="education.html" class="navbar__link">Education</a></li>
+                    <li class="navbar__item"><a href="career.html" class="navbar__link">Career</a></li>
+                    <li class="navbar__item"><a href="skills.html" class="navbar__link">Skills</a></li>
+                    <li class="navbar__item navbar__item--cta">
+                        <a href="contactme.html" class="navbar__link navbar__link--cta">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+
+  <link rel="stylesheet" href="skill.css">
+
+
+
+<section class="dashboard">
+
+  <!-- TWO COLUMN WRAPPER -->
+  <div class="grid-two">
+
+    <!-- LANGUAGES (LEFT) -->
+    <div>
+      <div class="section-header">
+        <span class="icon">🌐</span>
+        <h2>Languages</h2>
+      </div>
+
+      <div class="card">
+        <div class="bar"><span>Bahasa Melayu</span><div class="track"><div class="fill" style="width:90%"></div></div><p>90%</p></div>
+        <div class="bar"><span>English</span><div class="track"><div class="fill" style="width:95%"></div></div><p>95%</p></div>
+        <div class="bar"><span>Mandarin</span><div class="track"><div class="fill" style="width:10%"></div></div><p>10%</p></div>
+      </div>
+
+      <div class="note">I currently just started learning Mandarin!</div>
+    </div>
+
+    <!-- SOFTWARE (RIGHT) -->
+    <div>
+      <div class="section-header">
+        <span class="icon">💻</span>
+        <h2>Skills</h2>
+      </div>
+
+      <div class="software-grid">
+        <div class="soft" data-info="Creating poster and designs"><canvas data-percent="80"></canvas><p>Canva</p></div>
+        <div class="soft" data-info="Word, Excel, Powerpoint"><canvas data-percent="70"></canvas><p>Microsoft</p></div>
+        <div class="soft" data-info="Editing Videos"><canvas data-percent="50"></canvas><p>Capcut</p></div>
+        <div class="soft" data-info="Research, E-mail, etc."><canvas data-percent="65"></canvas><p>Writing Skills</p></div>
+        <div class="soft" data-info="Organisation, Teamwork, Decision- making"><canvas data-percent="60"></canvas><p>Soft Skills</p></div>
+        <div class="soft" data-info="Presentation, Designing, Software Knowledge"><canvas data-percent="50"></canvas><p>Hard Skills</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERESTS -->
+  <div class="section-header">
+    <span class="icon">⭐</span>
+    <h2>Interests</h2>
+  </div>
+
+  <div class="interest-grid">
+    <div>📕 Reading</div>
+    <div>🎮 Gaming</div>
+    <div>☕ Making Matcha</div>
+  </div>
+
+ 
+<script src="skill.js"></script>
+
+</section>
+
+   <footer>
+        <div class="footer-form__bottom">
+            <p>&copy; 2026 Adibah Liyana. Assignment purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        // A small, accessible script to toggle the mobile menu.
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function () {
+                    // Toggle the .is-active class on both the toggle and the menu
+                    navbarToggle.classList.toggle('is-active');
+                    navbarMenu.classList.toggle('is-active');
+
+                    // Update the aria-expanded attribute
+                    const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+                    navbarToggle.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
+    </body>
+
+</html>
+           

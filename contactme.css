@@ -1,0 +1,146 @@
+
+        :root {
+            --footer-text: #FBEAE7;
+            --footer-heading: #ffffff;
+            --footer-link-hover: #ffffff;
+            --footer-border: #FBEAE7;
+            --form-button-bg: #B2456E;
+            --form-button-text: #ffffff;
+        }
+
+        /* FOOTER STYLE */
+        
+    .footer-form {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 3rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.footer-form__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--footer-border);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+        .footer-form__info h3,
+        .footer-form__form-section h3 {
+            color: var(--footer-heading);
+            font-size: 1.25rem;
+            margin: 0 0 1.5rem 0;
+            text-align: center;
+        }
+
+        .footer-form__info {  
+        background-color: #B2456E;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
+
+        .footer-form__info p { 
+            margin: 0 0 1rem 0;
+            text-align: center; }
+        .footer-form__info a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-form__info a:hover { color: var(--footer-link-hover); text-decoration: underline; }
+        
+        .footer-form__form .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-form__form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .footer-form__form .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--footer-border);
+            background-color: #FBEAE7;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .footer-form__form .form-control:focus {
+            outline: 2px solid var(--form-button-bg);
+            border-color: var(--form-button-bg);
+        }
+
+        .footer-form__form textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .footer-form__submit-button {
+            width: 100%;
+            background-color: var(--form-button-bg);
+            color: var(--form-button-text);
+            border: none;
+            padding: 0.875rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .footer-form__submit-button:hover { opacity: 0.85; }
+        
+        .footer-form__spam-notice {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .footer-form__bottom {
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        @media (min-width: 992px) {
+            .footer-form__main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .footer-form__contact-person {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-item {
+    padding: 1rem;
+    background-color: rgba(251, 234, 231, 0.1); /* Optional: adds a subtle background */
+    border-radius: 8px;
+}
+
+.contact-item p {
+    margin: 0.5rem 0;
+}
+
+.contact-item p:first-child {
+    font-weight: 500;
+}
+
+

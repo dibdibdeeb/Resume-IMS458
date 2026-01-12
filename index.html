@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="shortcut icon" href="picture/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="heroimage.css">
+</head>
+<body>
+
+    <header class="navbar" role="banner">
+        <div class="navbar__container">
+            <a style="color: #B2456E;" href="index.html" class="navbar__brand">
+                <img src="picture/logo.png" alt="Logo" class="navbar__logo">
+                Adibah Liyana
+            </a>
+            
+            <button class="navbar__toggle" 
+                    id="navbarToggle" 
+                    aria-label="Toggle navigation" 
+                    aria-controls="navbarMenu" 
+                    aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="aboutme.html" class="navbar__link">About Me</a></li>
+                    <li class="navbar__item"><a href="education.html" class="navbar__link">Education</a></li>
+                    <li class="navbar__item"><a href="career.html" class="navbar__link">Career</a></li>
+                    <li class="navbar__item"><a href="skills.html" class="navbar__link">Skills</a></li>
+                    <li class="navbar__item navbar__item--cta">
+                        <a href="contactme.html" class="navbar__link navbar__link--cta">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--hero section-->
+    <section class="split-bio-hero">
+        <div class="split-bio-hero-image" role="img" aria-label="A professional headshot of Adibah Liyana.">
+            <!-- Background image is set in CSS -->
+        </div>
+        <div class="split-bio-hero-content">
+            <p class="split-bio-hero-greeting">HI I'M ADIBAH!</p>
+            <h1 class="split-bio-hero-title">“You can always edit a bad page. You can’t edit a blank page.”</h1>
+            <p class="split-bio-hero-bio">
+                First Year Student at UiTM Puncak Perdana
+            </p>
+            <a href="aboutme.html" role="button" class="split-bio-hero-cta">More about me</a>
+        </div>
+    </section>
+
+    <main>
+        <div class="footer-form__bottom">
+            <p>&copy; 2026 Adibah Liyana. Assignment purposes.</p>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function () {
+                    navbarToggle.classList.toggle('is-active');
+                    navbarMenu.classList.toggle('is-active');
+
+                    const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+                    navbarToggle.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
