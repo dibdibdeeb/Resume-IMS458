@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #B2456E 0%, #552619 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.education-section {
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 150px);
+}
+
+.education-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.education-column,
+.achievements-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #FBEAE7;
+}
+
+.education-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.edu-logo {
+    flex-shrink: 0;
+}
+
+.edu-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid #FBEAE7;
+    padding: 10px;
+    background: #FBEAE7;
+}
+
+.edu-content {
+    flex: 1;
+}
+
+.edu-title {
+    font-size: 1.2rem;
+    color: #552619;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.edu-institution {
+    font-size: 1rem;
+    color: #B2456E;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.edu-location {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.edu-year {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+}
+
+.achievement-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FBEAE7;
+    border-radius: 50%;
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-title {
+    font-size: 1.1rem;
+    color: #552619;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.achievement-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.achievement-institution {
+    font-size: 0.9rem;
+    color: #B2456E;
+    font-weight: 500;
+}
+
+.footer-form__bottom {
+    background-color: #B2456E;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 968px) {
+    .education-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .education-card,
+    .achievement-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .edu-logo img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .edu-title {
+        font-size: 1rem;
+    }
+
+    .achievement-title {
+        font-size: 1rem;
+    }
+}

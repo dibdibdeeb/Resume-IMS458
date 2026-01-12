@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #FBEAE7;
+  color: #552619 ;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 span {
+  color: #552619 ;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.section-header .icon {
+  font-size: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.track {
+  grid-column: span 2;
+  height: 8px;
+  background: #552619;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.fill {
+  height: 100%;
+  background: #ff4b78;
+  border-radius: 4px;
+}
+
+.note {
+  background: #d4abb6;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.soft {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+canvas {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 5px;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.interest-grid > div {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* animation for bars */
+.fill {
+  transition: width 1.4s ease;
+}
+
+/* expandable description area */
+.soft {
+  cursor: pointer;
+  position: relative;
+}
+
+.soft .details {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #B2456E;
+}
+
+.soft.active .details {
+  display: block;
+}
+
+/* add subtle active highlight */
+.soft.active {
+  box-shadow: 0 0 10px rgba(255, 75, 120, 0.3);
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Two-column container */
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}

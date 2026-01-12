@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Adibah Liyana</title>
+    <link rel="shortcut icon" href="picture/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="aboutme.css">
+</head>
+<body>
+
+    <header class="navbar" role="banner">
+        <div class="navbar__container">
+            <a style="color: #B2456E;" href="index.html" class="navbar__brand">
+                <img src="picture/logo.png" alt="Logo" class="navbar__logo">
+                Adibah Liyana
+            </a>
+
+            <button class="navbar__toggle" 
+                    id="navbarToggle" 
+                    aria-label="Toggle navigation" 
+                    aria-controls="navbarMenu" 
+                    aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="navbar__list">
+                 <li class="navbar__item"><p><a href="index.html" class="navbar__link">Home</a></p></li>
+                    <li class="navbar__item"><p><a href="aboutme.html" class="navbar__link">About Me</a></p></li>
+                    <li class="navbar__item"><a href="education.html" class="navbar__link">Education</a></li>
+                    <li class="navbar__item"><a href="career.html" class="navbar__link">Career</a></li>
+                    <li class="navbar__item"><a href="skills.html" class="navbar__link">Skills</a></li>
+                    <li class="navbar__item navbar__item--cta">
+                        <a href="contactme.html" class="navbar__link navbar__link--cta">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <link rel="stylesheet" href="career.css">
+</head>
+
+    <div class="resume-container">
+
+        <!-- Work Experience Cards -->
+        <div class="experience-grid">
+            <div class="experience-card">
+                <img src="picture/sugirl.jpg" alt="Sugirl Logo" class="company-logo">
+                <div class="date">July 2024 - September 2024</div>
+                <h3 class="position">Kitchen Crew</h3>
+                <p class="company">Sugirl, Setia City Mall</p>
+                <div class="job-scope">
+                    Prepared desserts and drinks, managed cash register, and restocking.
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <img src="picture/burger king.png" alt="Burger King Logo" class="company-logo">
+                <div class="date">February 2023 - March 2023</div>
+                <h3 class="position">Crew Member</h3>
+                <p class="company">Burger King, Aman Perdana</p>
+                <div class="job-scope">
+                    Managed cash register operations and food presentation.
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <img src="picture/dubuyo.jpg" alt="Dubuyo Logo" class="company-logo">
+                <div class="date">May 2022 - September 2022</div>
+                <h3 class="position">Waitress</h3>
+                <p class="company">Dubuyo, Setia City Mall</p>
+                <div class="job-scope">
+                    Assisted with taking orders, serving food and beverages, and cash register.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-form__bottom">
+            <p>&copy; 2026 Adibah Liyana. Assignment purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function () {
+                    navbarToggle.classList.toggle('is-active');
+                    navbarMenu.classList.toggle('is-active');
+
+                    const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+                    navbarToggle.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
